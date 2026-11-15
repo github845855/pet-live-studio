@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Pet Live Studio · 直播控制台</title>
+  <link rel="stylesheet" href="/assets/control.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Pet Live Studio 控制台">
+        <span class="brand-mark">P</span>
+        <span class="brand-text"><strong>Pet Live</strong><small>STUDIO</small></span>
+      </a>
+      <p class="nav-caption">工作区</p>
+      <nav class="nav" aria-label="控制台导航">
+        <a class="nav-link active" href="#overview"><span>◈</span>总览</a>
+        <a class="nav-link" href="#stage"><span>▧</span>舞台与宠物</a>
+        <a class="nav-link" href="#music"><span>♫</span>背景音乐</a>
+        <a class="nav-link" href="#voice"><span>♬</span>语音播报</a>
+        <a class="nav-link" href="#interaction"><span>⑂</span>互动与连接</a>
+        <a class="nav-link" href="#actions"><span>✦</span>动作测试</a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="live-indicator"></span>
+        <div><strong>本机运行</strong><small>配置只保存在本地</small></div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div class="title-block">
+          <span class="eyebrow">PET LIVE STUDIO</span>
+          <h1>直播控制台</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="pill"><i id="ws-dot"></i><span id="ws-status">连接中</span></span>
+          <span class="pill"><i class="dot violet"></i><strong id="client-count">0</strong><span>个页面</span></span>
+          <button id="copy-obs" class="button ghost small" type="button">复制 OBS 地址</button>
+          <a class="button primary" href="/" target="_blank" rel="noreferrer">打开舞台 ↗</a>
+        </div>
+      </header>
+
+      <section id="overview" class="section">
+        <div class="overview-grid">
+          <article class="panel preview-panel">
+            <div class="panel-head">
+              <div><span class="eyebrow">LIVE PREVIEW</span><h2>实时舞台预览</h2></div>
+              <div class="head-actions">
+                <label class="preview-sound" title="预览声音使用控制台浏览器的音色，可能与 OBS 舞台不同">
+                  <input id="preview-audio" type="checkbox"><span></span>预览声音
+                </label>
+                <button id="refresh-preview" class="button ghost small" type="button">刷新预览</button>
+                <a class="button ghost small" href="/" target="_blank" rel="noreferrer">新窗口 ↗</a>
+              </div>
+            </div>
+            <div class="preview-frame">
+              <iframe id="stage-preview" src="/?preview=1" title="舞台实时预览"></iframe>
+            </div>
+            <p class="hint">直接在预览里拖动宠物就能调整位置，滚轮可以缩放；所有更改会立刻同步到 OBS 舞台。预览默认静音，声音以 OBS 舞台为准。</p>
+          </article>
+
+          <div class="overview-side">
+            <article class="panel stat-card">
+              <span class="stat-icon violet">✦</span>
+              <div><small>模型回复</small><strong id="llm-summary">读取中</strong><span id="llm-detail">—</span></div>
+            </article>
+            <article class="panel stat-card">
+              <span class="stat-icon green">◉</span>
+              <div><small>B 站直播间</small><strong id="room-summary">未连接</strong><span id="room-detail">—</span></div>
+            </article>
+            <article class="panel stat-card">
+              <span class="stat-icon amber">♫</span>
+              <div><small>背景音乐</small><strong id="music-summary">未选择</strong><span id="music-detail">—</span></div>
+            </article>
+            <article class="panel quick-card">
+              <div class="panel-head compact"><h3>快捷操作</h3></div>
+              <div class="quick-grid">
+                <button id="quick-music" class="button secondary" type="button">播放 / 暂停音乐</button>
+                <button id="quick-wave" class="button secondary" type="button">挥手欢迎</button>
+                <button id="quick-jump" class="button secondary" type="button">开心跳跃</button>
+                <button id="quick-event" class="button secondary" type="button">测试互动</button>
+              </div>
+            </article>
+            <article class="panel tips-mini">
+              <div class="panel-head compact"><h3>上手提示</h3></div>
+              <ul class="mini-list">
+                <li>在预览里拖动宠物定位，滚轮缩放。</li>
+                <li>背景音乐上传曲目后可直接播放。</li>
+                <li>OBS 浏览器源要勾选「控制音频」。</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-head" id="stage">
+        <div><span class="eyebrow">01 / STAGE</span><h2>舞台与宠物</h2></div>
+        <p>位置、大小、背景和画面元素一次调好。</p>
+      </div>
+      <section class="grid">
+        <article class="panel span-7">
+          <div class="panel-head">
+            <div><span class="panel-icon violet">▧</span><div><h3>宠物位置与大小</h3><p>拖动预览中的宠物，或使用滑杆微调</p></div></div>
+            <button id="reset-layout" class="button ghost small" type="button">恢复默认</button>
+          </div>
+          <div class="layout-fields">
+            <label class="field"><span>水平位置 <output id="pet-x-value">70%</output></span><input id="pet-x" type="range" min="0" max="100" step="0.5"></label>
+            <label class="field"><span>垂直位置 <output id="pet-y-value">55%</output></span><input id="pet-y" type="range" min="0" max="100" step="0.5"></label>
+            <label class="field"><span>宠物大小 <output id="pet-scale-value">1.00×</output></span><input id="pet-scale" type="range" min="0.5" max="3" step="0.05"></label>
+            <label class="field"><span>无人 <output id="sleep-after-value">20 分钟</output> 后睡觉</span><input id="sleep-after" type="range" min="0" max="120" step="5"></label>
+            <label class="field"><span>一整天压缩成 <output id="day-cycle-value">60 分钟</output></span><input id="day-cycle" type="range" min="0" max="240" step="10"></label>
+            <div class="toggle-row">
+              <div class="switch-row"><span>状态面板</span><label class="switch"><input id="hud-enabled" type="checkbox"><span></span></label></div>
+            </div>
+            <label class="field"><span>面板位置</span>
+              <select id="hud-position">
+                <option value="left-bottom">左下</option>
+                <option value="right-bottom">右下</option>
+                <option value="left-top">左上</option>
+                <option value="right-top">右上</option>
+              </select>
+            </label>
+            <label class="field"><span>面板不透明度 <output id="hud-opacity-value">72%</output></span><input id="hud-opacity" type="range" min="0.2" max="1" step="0.05"></label>
+            <label class="field"><span>面板大小 <output id="hud-scale-value">1.00×</output></span><input id="hud-scale" type="range" min="0.6" max="1.6" step="0.05"></label>
+            <div class="anchor-row">
+              <span>快速对齐</span>
+              <div class="segmented" id="anchor-buttons">
+                <button type="button" data-anchor="left-top">左上</button>
+                <button type="button" data-anchor="center">居中</button>
+                <button type="button" data-anchor="right-top">右上</button>
+                <button type="button" data-anchor="left-bottom">左下</button>
+                <button type="button" data-anchor="right-bottom">右下</button>
+              </div>
+            </div>
+            <div class="toggle-row">
+              <div class="switch-row"><span>水平镜像</span><label class="switch"><input id="pet-flip" type="checkbox"><span></span></label></div>
+              <div class="switch-row"><span>地面阴影</span><label class="switch"><input id="pet-shadow" type="checkbox"><span></span></label></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel span-5">
+          <div class="panel-head">
+            <div><span class="panel-icon amber">▣</span><div><h3>背景与画面</h3><p>背景库随选随切，换图时舞台交叉淡入</p></div></div>
+            <span class="tag" id="background-count">0 张</span>
+          </div>
+          <div class="background-grid" id="background-grid"><p class="empty">还没有背景图，先上传一张吧。</p></div>
+          <form id="background-form" class="upload-row">
+            <label class="button secondary file-button">选择图片<input name="file" type="file" accept="image/png,image/jpeg,image/webp" required></label>
+            <button class="button primary" type="submit">上传并应用</button>
+            <button class="button ghost" id="remove-background" type="button">恢复透明</button>
+          </form>
+          <p class="form-message" id="background-result" role="status"></p>
+          <label class="field"><span>背景压暗 <output id="dim-value">35%</output></span><input id="background-dim" type="range" min="0" max="0.9" step="0.05"></label>
+          <div class="toggle-row">
+            <div class="switch-row"><span>左上角状态</span><label class="switch"><input id="show-brand" type="checkbox"><span></span></label></div>
+            <div class="switch-row"><span>互动列表</span><label class="switch"><input id="feed-enabled" type="checkbox"><span></span></label></div>
+          </div>
+          <label class="field"><span>互动列表位置</span>
+            <select id="feed-position"><option value="left">左侧</option><option value="right">右侧</option></select>
+          </label>
+        </article>
+      </section>
+
+      <div class="section-head" id="music">
+        <div><span class="eyebrow">02 / MUSIC</span><h2>背景音乐</h2></div>
+        <p>上传本地曲目，直播时自动循环播放。</p>
+      </div>
+      <section class="grid">
+        <article class="panel span-6">
+          <div class="panel-head">
+            <div><span class="panel-icon pink">♫</span><div><h3>正在播放</h3><p id="music-now">未选择曲目</p></div></div>
+            <label class="switch"><input id="music-enabled" type="checkbox"><span></span></label>
+          </div>
+          <div class="player">
+            <div class="player-art" id="player-art">♫</div>
+            <div class="player-main">
+              <strong id="player-title">背景音乐</strong>
+              <div class="player-controls">
+                <button id="music-prev" class="icon-button" type="button" title="上一首">⏮</button>
+                <button id="music-toggle" class="play-button" type="button" title="播放 / 暂停">▶</button>
+                <button id="music-next" class="icon-button" type="button" title="下一首">⏭</button>
+                <label class="switch inline" title="循环播放"><input id="music-loop" type="checkbox"><span></span></label>
+              </div>
+            </div>
+          </div>
+          <label class="field"><span>音量 <output id="music-volume-value">60%</output></span><input id="music-volume" type="range" min="0" max="1" step="0.05"></label>
+          <label class="field"><span>说话时压低到 <output id="music-duck-value">35%</output></span><input id="music-duck" type="range" min="0" max="1" step="0.05"></label>
+          <p class="hint">音乐由舞台页面播放。OBS 浏览器源记得勾选「控制音频」；如果浏览器拦截了自动播放，点击舞台右下角的声音提示即可。</p>
+        </article>
+
+        <article class="panel span-6">
+          <div class="panel-head">
+            <div><span class="panel-icon violet">☰</span><div><h3>曲库</h3><p>点击曲目即可切换</p></div></div>
+            <span class="tag" id="track-count">0 首</span>
+          </div>
+          <form id="music-form" class="upload-row">
+            <label class="button secondary file-button">添加音乐<input name="file" type="file" accept="audio/*,.mp3,.m4a,.aac,.ogg,.wav,.flac,.webm" required></label>
+            <button class="button primary" type="submit">上传</button>
+            <button class="button ghost" id="music-scan" type="button">扫描目录</button>
+          </form>
+          <p class="form-message" id="music-result" role="status"></p>
+          <p class="hint">也可以把音频直接拷进 <code>runtime/media/music/</code>（NAS 共享盘也行），再点「扫描目录」，文件名写成「歌手 - 歌名」会自动拆开。</p>
+          <div id="track-list" class="track-list"><p class="empty">还没有音乐，先上传一首吧。</p></div>
+        </article>
+      </section>
+
+      <div class="section-head" id="voice">
+        <div><span class="eyebrow">03 / VOICE</span><h2>语音播报</h2></div>
+        <p>可使用浏览器语音，或通过可配置的 TTS API 使用固定音色。</p>
+      </div>
+      <section class="grid">
+        <article class="panel span-7">
+          <div class="panel-head">
+            <div><span class="panel-icon pink">♬</span><div><h3>回复语音</h3><p>模型回复时由舞台自动朗读，并自动压低背景音乐</p></div></div>
+            <label class="switch"><input id="speech-enabled" type="checkbox"><span></span></label>
+          </div>
+          <form id="voice-form" class="form-grid">
+            <label class="field field-wide"><span>语音引擎</span>
+              <select name="speech_provider" id="speech-provider">
+                <option value="browser">浏览器内置语音（免费，受浏览器影响）</option>
+                <option value="openai">OpenAI 兼容 TTS API（自定义服务地址）</option>
+                <option value="azure">Azure Speech API（兼容旧配置）</option>
+              </select>
+            </label>
+            <div class="field field-wide" id="browser-speech-settings">
+              <label class="field"><span>浏览器音色</span><select name="speech_voice" id="speech-voice"><option value="">系统默认中文语音</option></select></label>
+              <small id="voice-actual">舞台实际使用：等待连接</small>
+            </div>
+            <div class="form-grid field-wide" id="openai-speech-settings" hidden>
+              <label class="field field-wide"><span>API 根地址</span><input name="speech_base_url" id="speech-base-url" type="url" placeholder="https://api.openai.com/v1" autocomplete="url"></label>
+              <label class="field"><span>语音模型</span><input name="speech_model" id="speech-model" type="text" placeholder="例如 tts-1" autocomplete="off"></label>
+              <label class="field"><span>音色 ID</span><input name="speech_openai_voice" id="speech-openai-voice" type="text" placeholder="例如 alloy 或服务提供的 voice ID" autocomplete="off"></label>
+              <small class="field-wide">服务需实现 OpenAI 兼容的 <code>POST /audio/speech</code> 接口，返回 MP3。HTTP 仅允许本机或局域网地址。</small>
+            </div>
+            <div class="form-grid field-wide" id="azure-speech-settings" hidden>
+              <label class="field"><span>Azure 资源区域</span><input name="speech_region" id="speech-region" type="text" placeholder="例如 eastasia" autocomplete="off"></label>
+              <label class="field"><span>固定音色</span>
+                <select name="azure_speech_voice" id="azure-speech-voice">
+                  <option value="zh-CN-XiaoxiaoNeural">晓晓（女声）</option>
+                  <option value="zh-CN-XiaoyiNeural">晓伊（女声）</option>
+                  <option value="zh-CN-YunxiNeural">云希（男声）</option>
+                  <option value="zh-CN-YunyangNeural">云扬（男声）</option>
+                </select>
+              </label>
+              <small class="field-wide">语音文本会发送到 Microsoft Azure Speech 合成音频。</small>
+            </div>
+            <div class="form-grid field-wide" id="speech-api-key-settings" hidden>
+              <label class="field"><span id="speech-key-label">API Key（可选）</span><input id="speech-key" type="password" placeholder="留空保持已保存的密钥" autocomplete="new-password"></label>
+              <label class="check-field"><input id="clear-speech-key" type="checkbox"><span>清除已保存的 API Key</span></label>
+              <small class="field-wide">密钥只保存在本机设置中，不会回传到网页；不需要鉴权的本地服务可以留空。</small>
+            </div>
+            <label class="field"><span>语速 <output id="rate-value">1.0</output></span><input name="speech_rate" id="speech-rate" type="range" min="0.5" max="2" step="0.1"></label>
+            <label class="field" id="speech-pitch-setting"><span>音调 <output id="pitch-value">1.0</output></span><input name="speech_pitch" id="speech-pitch" type="range" min="0.5" max="2" step="0.1"></label>
+            <label class="field field-wide"><span>音量 <output id="volume-value">100%</output></span><input name="speech_volume" id="speech-volume" type="range" min="0" max="1" step="0.05"></label>
+            <div class="form-actions field-wide">
+              <button class="button primary" type="submit">保存语音设置</button>
+              <button class="button secondary" id="test-voice" type="button">试听</button>
+              <span class="form-message" id="voice-result" role="status"></span>
+            </div>
+          </form>
+          <p class="hint">OpenAI 兼容接口可使用 OpenAI 或其他实现同一接口的服务，服务地址、模型、音色和密钥均可自行配置；也可继续使用浏览器语音或 Azure。</p>
+        </article>
+
+        <article class="panel span-5">
+          <div class="panel-head">
+            <div><span class="panel-icon amber">◔</span><div><h3>冷场连续输出</h3><p>无人互动一段时间后逐条主动聊天</p></div></div>
+            <label class="switch"><input id="idle-chatter-enabled" type="checkbox"><span></span></label>
+          </div>
+          <form id="chatter-form">
+            <label class="field"><span>无人互动 <output id="idle-chatter-value">15 秒</output> 后进入闲聊</span><input id="idle-chatter-interval" type="range" min="10" max="600" step="5"></label>
+            <p class="hint">这是进入闲聊模式前的静默时间，不是每句话的间隔。闲聊逐条播完再接下一句；弹幕、进场、礼物和关注会结束闲聊并优先回应。</p>
+            <button class="button primary" type="submit">保存冷场设置</button>
+            <p class="form-message" id="chatter-result" role="status"></p>
+          </form>
+        </article>
+      </section>
+
+      <div class="section-head" id="interaction">
+        <div><span class="eyebrow">04 / CONNECTIONS</span><h2>互动与连接</h2></div>
+        <p>模型、直播间和测试事件；密钥只保存在本机。</p>
+      </div>
+      <section class="grid">
+        <article class="panel span-7">
+          <div class="panel-head">
+            <div><span class="panel-icon violet">✦</span><div><h3>模型 API</h3><p>OpenAI 兼容接口，用于回复和动作标签</p></div></div>
+            <span class="tag">CHAT COMPLETIONS</span>
+          </div>
+          <form id="api-form" class="form-grid">
+            <label class="field field-wide"><span>API 地址</span>
+              <input name="llm_base_url" type="url" placeholder="http://127.0.0.1:11434/v1" autocomplete="url">
+              <small>支持 HTTPS；HTTP 允许本机和局域网私有地址（如 192.168.x.x）。</small>
+            </label>
+            <label class="field"><span>模型名称</span><input name="llm_model" type="text" placeholder="留空自动发现" autocomplete="off"></label>
+            <label class="field"><span>API Key</span><input name="api_key" type="password" placeholder="留空保持已保存的密钥" autocomplete="new-password"></label>
+            <label class="check-field field-wide"><input name="clear_api_key" type="checkbox"><span>清除已保存的 API Key</span></label>
+            <label class="field field-wide"><span>宠物人设提示词</span>
+              <textarea name="persona" rows="3" maxlength="2000" placeholder="亲切、活泼，回复简短自然……"></textarea>
+            </label>
+            <div class="form-actions field-wide">
+              <button class="button primary" type="submit">保存 API 设置</button>
+              <button class="button secondary" id="test-api" type="button">测试连接</button>
+              <span class="form-message" id="api-result" role="status"></span>
+            </div>
+          </form>
+          <p class="hint" id="reply-queue-status" role="status">回复队列状态等待读取。</p>
+          <p class="form-message" id="reply-last-status" role="status"></p>
+        </article>
+
+        <article class="panel span-5">
+          <div class="panel-head">
+            <div><span class="panel-icon green">◉</span><div><h3>B 站直播间</h3><p>只读接收弹幕、礼物、进场和关注</p></div></div>
+          </div>
+          <form id="bili-form">
+            <label class="field"><span>房间号</span><input name="bili_room_id" type="text" inputmode="numeric" placeholder="例如 1963458904"></label>
+            <label class="field field-wide"><span>SESSDATA（登录后可选）</span><input name="sessdata" type="password" placeholder="留空保持已保存的登录态" autocomplete="new-password"><small>登录可见的弹幕或昵称不完整时再填写；只粘贴 SESSDATA 的值，不要粘贴整段 Cookie。下方有获取说明。</small></label>
+            <label class="check-field"><input name="clear_sessdata" type="checkbox"><span>清除已保存的登录态</span></label>
+            <div class="form-actions"><button class="button primary" type="submit">保存房间设置</button></div>
+            <div class="connection-box">
+              <span id="bili-dot"></span>
+              <div><strong id="bili-status">尚未连接</strong><small id="bili-status-detail">设置房间号后开始只读连接</small></div>
+            </div>
+            <div class="form-actions">
+              <button class="button secondary" id="connect-room" type="button">连接 / 测试</button>
+              <button class="button ghost" id="disconnect-room" type="button">断开</button>
+            </div>
+            <details class="code-details">
+              <summary>如何获取 B 站登录态（仅在需要时）</summary>
+              <ol class="tips-list">
+                <li>先在浏览器登录自己的 B 站账号并打开任意 bilibili.com 页面。</li>
+                <li>按 F12，在「应用程序 / Application」→「Cookie」→「https://www.bilibili.com」中找到 SESSDATA。</li>
+                <li>只复制 SESSDATA 对应的值，粘贴到上方并保存。不要分享或截图这个值；它相当于账号登录凭证。</li>
+              </ol>
+              <p class="hint">登录态可用于需要登录权限的消息；普通弹幕中的昵称通常会由 B 站事件直接提供。SESSDATA 过期后请在 B 站重新登录并替换。</p>
+            </details>
+          </form>
+        </article>
+
+        <article class="panel span-5">
+          <div class="panel-head">
+            <div><span class="panel-icon amber">✉</span><div><h3>互动事件模拟</h3><p>检查事件流和模型回复</p></div></div>
+          </div>
+          <form id="event-form">
+            <label class="field"><span>事件类型</span>
+              <select name="kind">
+                <option value="danmaku">弹幕</option><option value="gift">礼物</option>
+                <option value="enter">进场</option><option value="follow">关注</option>
+              </select>
+            </label>
+            <label class="field"><span>观众昵称</span><input name="name" maxlength="40" value="测试观众"></label>
+            <label class="field"><span>互动内容</span><input name="text" maxlength="500" value="你好呀！"></label>
+            <button class="button primary" type="submit">发送测试事件</button>
+            <p class="form-message" id="event-result" role="status"></p>
+          </form>
+        </article>
+
+        <article class="panel span-7">
+          <div class="panel-head">
+            <div><span class="panel-icon pink">◉</span><div><h3>抖音直播间</h3><p>通过本机 DyHub 桥接接收弹幕、礼物和进场</p></div></div>
+            <span class="tag">DYHUB</span>
+          </div>
+          <form id="douyin-form">
+            <div class="form-grid">
+              <label class="field"><span>抖音房间号（web_rid）</span><input name="douyin_room_id" type="text" inputmode="numeric" placeholder="例如 708764876300"></label>
+              <label class="field"><span>DyHub 地址</span><input name="douyin_bridge_url" type="text" placeholder="http://127.0.0.1:8757"></label>
+            </div>
+            <div class="form-actions">
+              <button class="button primary" type="submit">保存</button>
+              <button class="button secondary" id="connect-douyin" type="button">连接 / 测试</button>
+              <button class="button ghost" id="disconnect-douyin" type="button">断开</button>
+              <a class="button ghost small" id="open-dyhub" href="http://127.0.0.1:8757" target="_blank" rel="noreferrer">打开 DyHub ↗</a>
+            </div>
+            <div class="connection-box">
+              <span id="douyin-dot"></span>
+              <div><strong id="douyin-status">尚未连接</strong><small id="douyin-status-detail">先启动 DyHub，再填房间号</small></div>
+            </div>
+            <details class="code-details">
+              <summary>最简单的抖音接入方式</summary>
+              <p class="hint">推荐继续用 DyHub：它负责适配抖音变化，本项目只接收本机转发的标准弹幕，不需要在这里填抖音 Cookie，也不需要在浏览器控制台粘贴脚本。</p>
+              <ol class="tips-list">
+                <li>Windows 安装并启动 Docker Desktop。</li>
+                <li>在 PowerShell 执行下面两行，首次启动会下载并构建服务：</li>
+              </ol>
+              <pre>git clone https://github.com/ymstar/dyhub
+cd dyhub
+docker compose up -d --build
+              </pre>
+              <ol class="tips-list" start="3">
+                <li>打开 <a href="http://127.0.0.1:8757" target="_blank" rel="noreferrer">DyHub 控制台</a>，按它的页面提示添加并连接直播间。</li>
+                <li>回到这里填入直播间号，点击「连接 / 测试」。</li>
+              </ol>
+              <p class="hint">DyHub 依赖抖音网页协议，平台更新时可能需要更新 DyHub；这是目前比在本项目里维护私有协议抓取更省事、也更容易维护的做法。</p>
+            </details>
+            <p class="hint">抖音没有公开稳定的网页弹幕接口；这里用 MIT 许可的 DyHub 做本机桥接，弹幕只在本机传递，不需要把 Cookie 交给 Pet Live Studio。</p>
+          </form>
+        </article>
+
+        <article class="panel span-12">
+          <div class="panel-head">
+            <div><span class="panel-icon violet">◍</span><div><h3>对话记忆与连续剧情</h3><p>记住最近的话题，支持多轮对话和连续小故事</p></div></div>
+            <label class="switch"><input id="memory-enabled" type="checkbox"><span></span></label>
+          </div>
+          <div class="memory-row">
+            <label class="field"><span>上下文条数 <output id="memory-turns-value">6</output></span><input id="memory-turns" type="range" min="2" max="12" step="1"></label>
+            <div class="memory-count"><strong id="memory-count">0</strong><span>条记忆</span></div>
+            <button id="clear-memory" class="button secondary" type="button">清空记忆</button>
+          </div>
+          <p class="hint">会记住最近几轮观众互动和宠物的自言自语，用于连续对话与连续剧情；保存在 runtime/memory.json，只在本机使用。关闭后模型既不读取也不写入记忆。小模型建议 4–6 条，条数越多提示词越长。</p>
+        </article>
+
+        <article class="panel span-12 tips-panel">
+          <div class="panel-head">
+            <div><span class="panel-icon violet">◇</span><div><h3>OBS 与舞台</h3><p>把本机舞台添加为浏览器源即可</p></div></div>
+          </div>
+          <div class="url-box">
+            <code id="obs-url">http://127.0.0.1:8775/</code>
+            <button id="copy-obs-2" class="button secondary small" type="button">复制</button>
+          </div>
+          <ul class="tips-list">
+            <li>OBS 添加「浏览器源」，地址填上面的舞台地址，宽高按场景设置。</li>
+            <li>勾选「控制音频」，背景音乐和语音才会进入直播。</li>
+            <li>舞台背景默认透明，可直接叠加在直播画面上。</li>
+            <li>位置和大小随时可以在左侧预览里拖动调整，立即生效。</li>
+          </ul>
+          <a class="button secondary" href="/" target="_blank" rel="noreferrer">打开舞台预览 ↗</a>
+        </article>
+      </section>
+
+      <div class="section-head" id="actions">
+        <div><span class="eyebrow">05 / ACTIONS</span><h2>动作测试</h2></div>
+        <p>直接播放预设动画，不调用模型。</p>
+      </div>
+      <section class="grid">
+        <article class="panel span-12">
+          <div id="action-grid" class="action-grid"></div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>Pet Live Studio</span>
+        <span>本机运行 · B 站 / 抖音仅接收事件 · 配置保存在 runtime/</span>
+      </footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/assets/control.js" defer></script>
+</body>
+</html>

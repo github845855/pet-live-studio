@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "width": 1280,
+  "frame_ms": 42,
+  "generated_at": 1793457249,
+  "actions": {
+    "bored": {
+      "file": "bored.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 8677954
+    },
+    "busy": {
+      "file": "busy.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 10283134
+    },
+    "celebrate": {
+      "file": "celebrate.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 9602602
+    },
+    "gift": {
+      "file": "gift.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 9106946
+    },
+    "grumpy": {
+      "file": "grumpy.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 7695946
+    },
+    "happy_jump": {
+      "file": "happy_jump.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 10087368
+    },
+    "idle": {
+      "file": "idle.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 9036106
+    },
+    "laugh": {
+      "file": "laugh.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 8694766
+    },
+    "shy": {
+      "file": "shy.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 9050564
+    },
+    "sleepy": {
+      "file": "sleepy.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 8691176
+    },
+    "surprised": {
+      "file": "surprised.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 8636336
+    },
+    "thinking": {
+      "file": "thinking.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 10133254
+    },
+    "welcome_wave": {
+      "file": "welcome_wave.webp",
+      "width": 1280,
+      "height": 720,
+      "frames": 241,
+      "duration": 10.12,
+      "bytes": 8894506
+    }
+  }
+}

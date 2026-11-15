@@ -1,0 +1,38 @@
+services:
+  pet-live-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pet-live-studio:latest
+    container_name: pet-live-studio
+    restart: unless-stopped
+    init: true
+    user: "${PUID:-1000}:${PGID:-100}"
+    ports:
+      - "8775:8775"
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "8775"
+      TZ: "${TZ:-Asia/Shanghai}"
+      PET_LIVE_ALLOWED_HOSTS: "${PET_LIVE_ALLOWED_HOSTS:-192.168.2.22,omvnas,omvnas.local,127.0.0.1,localhost}"
+      LLM_BASE_URL: "${LLM_BASE_URL:-http://192.168.2.20:8080/v1}"
+      LLM_ALLOW_HTTP_HOSTS: "${LLM_ALLOW_HTTP_HOSTS:-}"
+      DOUYIN_BRIDGE_URL: "${DOUYIN_BRIDGE_URL:-http://192.168.2.22:8757}"
+      DOUYIN_ALLOW_HTTP_HOSTS: "${DOUYIN_ALLOW_HTTP_HOSTS:-}"
+    volumes:
+      - ./runtime:/app/runtime
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8775/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 25s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

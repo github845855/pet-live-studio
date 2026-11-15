@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Pet Live Stage</title>
+  <link rel="stylesheet" href="/assets/stage.css">
+</head>
+<body>
+  <main class="stage" id="stage">
+    <div class="backdrop-stack" aria-hidden="true">
+      <div class="backdrop" id="backdrop-a"></div>
+      <div class="backdrop" id="backdrop-b"></div>
+    </div>
+
+    <header class="brand" id="brand">
+      <span class="live-dot" id="live-dot"></span>
+      <span id="connection">正在连接</span>
+    </header>
+
+    <section class="feed left" id="feed" aria-label="直播互动">
+      <div class="feed-title"><span>直播互动</span><span id="feed-count">0</span></div>
+      <div class="feed-empty" id="feed-empty">等待第一条互动…</div>
+      <div class="feed-list" id="feed-list"></div>
+    </section>
+
+    <div class="pet-wrap" id="pet-wrap" role="img" aria-label="互动宠物">
+      <video id="pet-a" class="pet pet-clip" muted playsinline preload="auto"></video>
+      <video id="pet-b" class="pet pet-clip" muted playsinline preload="auto"></video>
+      <img id="pet" class="pet pet-fallback" src="/assets/animations/idle.webp" alt="互动宠物" draggable="false" decoding="async">
+      <div class="shadow" id="shadow"></div>
+    </div>
+
+    <section class="pet-hud" id="pet-hud" aria-label="宠物状态" hidden>
+      <div class="hud-row"><span>饱食</span><i><b id="hud-hunger"></b></i></div>
+      <div class="hud-row"><span>心情</span><i><b id="hud-mood"></b></i></div>
+      <div class="hud-row"><span>精力</span><i><b id="hud-energy"></b></i></div>
+      <div class="hud-row"><span>亲密</span><i><b id="hud-bond"></b></i></div>
+      <div class="hud-foot"><span class="hud-level" id="hud-level">陌生</span><span class="hud-clock" id="hud-clock"></span></div>
+      <div class="hud-deltas" id="hud-deltas"></div>
+    </section>
+
+    <div id="bubble" class="bubble" aria-live="polite">嗨，欢迎来到直播间！</div>
+
+    <div class="drag-hint" id="drag-hint" aria-hidden="true">拖动宠物调整位置 · 滚轮缩放</div>
+    <button id="sound-hint" class="sound-hint" type="button" hidden>点击开启声音</button>
+  </main>
+  <audio id="bgm-a" preload="auto"></audio>
+  <audio id="bgm-b" preload="auto"></audio>
+  <script src="/assets/stage.js" defer></script>
+</body>
+</html>

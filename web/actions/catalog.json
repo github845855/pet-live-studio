@@ -1,0 +1,911 @@
+{
+  "version": 1,
+  "clip": {
+    "width": 640,
+    "height": 360
+  },
+  "clips": {
+    "三球抛接": {
+      "duration": 10.04,
+      "file": "三球抛接.webm",
+      "width": 640,
+      "height": 360
+    },
+    "下五子棋": {
+      "duration": 10.04,
+      "file": "下五子棋.webm",
+      "width": 640,
+      "height": 360
+    },
+    "东张西望": {
+      "duration": 10.04,
+      "file": "东张西望.webm",
+      "width": 640,
+      "height": 360
+    },
+    "中秋赏月吃月饼": {
+      "duration": 10.04,
+      "file": "中秋赏月吃月饼.webm",
+      "width": 640,
+      "height": 360
+    },
+    "优雅女仆舞": {
+      "duration": 10.04,
+      "file": "优雅女仆舞.webm",
+      "width": 640,
+      "height": 360
+    },
+    "余额-分文不剩": {
+      "duration": 10.04,
+      "file": "余额-分文不剩.webm",
+      "width": 640,
+      "height": 360
+    },
+    "余额-数金皱眉": {
+      "duration": 10.04,
+      "file": "余额-数金皱眉.webm",
+      "width": 640,
+      "height": 360
+    },
+    "余额-袋空如洗": {
+      "duration": 10.04,
+      "file": "余额-袋空如洗.webm",
+      "width": 640,
+      "height": 360
+    },
+    "余额-金袋叮当": {
+      "duration": 10.04,
+      "file": "余额-金袋叮当.webm",
+      "width": 640,
+      "height": 360
+    },
+    "余额-钱袋如常": {
+      "duration": 10.04,
+      "file": "余额-钱袋如常.webm",
+      "width": 640,
+      "height": 360
+    },
+    "余额-钱袋满溢": {
+      "duration": 10.04,
+      "file": "余额-钱袋满溢.webm",
+      "width": 640,
+      "height": 360
+    },
+    "侧身急躁跑": {
+      "duration": 10.04,
+      "file": "侧身急躁跑.webm",
+      "width": 640,
+      "height": 360
+    },
+    "偷吃零食被抓住": {
+      "duration": 10.04,
+      "file": "偷吃零食被抓住.webm",
+      "width": 640,
+      "height": 360
+    },
+    "傲娇生气": {
+      "duration": 10.04,
+      "file": "傲娇生气.webm",
+      "width": 640,
+      "height": 360
+    },
+    "写代码": {
+      "duration": 10.04,
+      "file": "写代码.webm",
+      "width": 640,
+      "height": 360
+    },
+    "写福字": {
+      "duration": 10.04,
+      "file": "写福字.webm",
+      "width": 640,
+      "height": 360
+    },
+    "凭空生花": {
+      "duration": 10.04,
+      "file": "凭空生花.webm",
+      "width": 640,
+      "height": 360
+    },
+    "动物环绕": {
+      "duration": 10.04,
+      "file": "动物环绕.webm",
+      "width": 640,
+      "height": 360
+    },
+    "半身转向踢腿": {
+      "duration": 5.17,
+      "file": "半身转向踢腿.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地专心玩魔方": {
+      "duration": 10.04,
+      "file": "原地专心玩魔方.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地小憩沉眠": {
+      "duration": 10.04,
+      "file": "原地小憩沉眠.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地左转奔跑": {
+      "duration": 10.04,
+      "file": "原地左转奔跑.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地敲击桌面互动": {
+      "duration": 10.04,
+      "file": "原地敲击桌面互动.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地漂浮踏步": {
+      "duration": 10.04,
+      "file": "原地漂浮踏步.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地跳跃抓碎头顶物品": {
+      "duration": 10.04,
+      "file": "原地跳跃抓碎头顶物品.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地蹲下玩玩具汽车": {
+      "duration": 10.04,
+      "file": "原地蹲下玩玩具汽车.webm",
+      "width": 640,
+      "height": 360
+    },
+    "原地重力下蹲压缩": {
+      "duration": 10.04,
+      "file": "原地重力下蹲压缩.webm",
+      "width": 640,
+      "height": 360
+    },
+    "变鸽子": {
+      "duration": 10.04,
+      "file": "变鸽子.webm",
+      "width": 640,
+      "height": 360
+    },
+    "可爱宅舞": {
+      "duration": 10.04,
+      "file": "可爱宅舞.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃Token": {
+      "duration": 10.04,
+      "file": "吃Token.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃冰淇淋融化": {
+      "duration": 10.04,
+      "file": "吃冰淇淋融化.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃午餐": {
+      "duration": 10.04,
+      "file": "吃午餐.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃大闸蟹": {
+      "duration": 10.04,
+      "file": "吃大闸蟹.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃年糕": {
+      "duration": 10.04,
+      "file": "吃年糕.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃早餐": {
+      "duration": 10.04,
+      "file": "吃早餐.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃晚餐": {
+      "duration": 10.04,
+      "file": "吃晚餐.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃汤圆": {
+      "duration": 10.04,
+      "file": "吃汤圆.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃白饭": {
+      "duration": 10.04,
+      "file": "吃白饭.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃粽子": {
+      "duration": 10.04,
+      "file": "吃粽子.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃糖葫芦": {
+      "duration": 10.04,
+      "file": "吃糖葫芦.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃腊八粥": {
+      "duration": 10.04,
+      "file": "吃腊八粥.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃西瓜": {
+      "duration": 10.04,
+      "file": "吃西瓜.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃重阳糕": {
+      "duration": 10.04,
+      "file": "吃重阳糕.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃长寿面": {
+      "duration": 10.04,
+      "file": "吃长寿面.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃青团": {
+      "duration": 10.04,
+      "file": "吃青团.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃饭·碗饭": {
+      "duration": 5.12,
+      "file": "吃饭·碗饭.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃饭团": {
+      "duration": 5.12,
+      "file": "吃饭团.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吃饺子": {
+      "duration": 10.04,
+      "file": "吃饺子.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吉祥物-哈气-dshwe": {
+      "duration": 5.17,
+      "file": "吉祥物-哈气-dshwe.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吉祥物-跳抓眩晕落地起身-dshwe": {
+      "duration": 8.0,
+      "file": "吉祥物-跳抓眩晕落地起身-dshwe.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吹气球": {
+      "duration": 10.04,
+      "file": "吹气球.webm",
+      "width": 640,
+      "height": 360
+    },
+    "吹笛子": {
+      "duration": 10.04,
+      "file": "吹笛子.webm",
+      "width": 640,
+      "height": 360
+    },
+    "哈欠连天": {
+      "duration": 10.04,
+      "file": "哈欠连天.webm",
+      "width": 640,
+      "height": 360
+    },
+    "堆雪人": {
+      "duration": 10.04,
+      "file": "堆雪人.webm",
+      "width": 640,
+      "height": 360
+    },
+    "大口吃零食": {
+      "duration": 10.04,
+      "file": "大口吃零食.webm",
+      "width": 640,
+      "height": 360
+    },
+    "女仆屈膝礼仪": {
+      "duration": 10.04,
+      "file": "女仆屈膝礼仪.webm",
+      "width": 640,
+      "height": 360
+    },
+    "小幅度原地360度旋转展示": {
+      "duration": 10.04,
+      "file": "小幅度原地360度旋转展示.webm",
+      "width": 640,
+      "height": 360
+    },
+    "小提琴演奏": {
+      "duration": 10.04,
+      "file": "小提琴演奏.webm",
+      "width": 640,
+      "height": 360
+    },
+    "工作状态-原地踱步张望": {
+      "duration": 10.04,
+      "file": "工作状态-原地踱步张望.webm",
+      "width": 640,
+      "height": 360
+    },
+    "工作状态-垂头叹气冒汗": {
+      "duration": 4.92,
+      "file": "工作状态-垂头叹气冒汗.webm",
+      "width": 640,
+      "height": 360
+    },
+    "工作状态-忙碌点按": {
+      "duration": 10.04,
+      "file": "工作状态-忙碌点按.webm",
+      "width": 640,
+      "height": 360
+    },
+    "工作状态-思考冒泡": {
+      "duration": 10.04,
+      "file": "工作状态-思考冒泡.webm",
+      "width": 640,
+      "height": 360
+    },
+    "工作状态-清点归档": {
+      "duration": 10.04,
+      "file": "工作状态-清点归档.webm",
+      "width": 640,
+      "height": 360
+    },
+    "工作状态-雀跃庆祝": {
+      "duration": 10.04,
+      "file": "工作状态-雀跃庆祝.webm",
+      "width": 640,
+      "height": 360
+    },
+    "开心小跑": {
+      "duration": 10.04,
+      "file": "开心小跑.webm",
+      "width": 640,
+      "height": 360
+    },
+    "弹飞": {
+      "duration": 10.12,
+      "file": "弹飞.webm",
+      "width": 640,
+      "height": 360
+    },
+    "待机呼吸休闲": {
+      "duration": 10.04,
+      "file": "待机呼吸休闲.webm",
+      "width": 640,
+      "height": 360
+    },
+    "悠闲哼歌": {
+      "duration": 10.04,
+      "file": "悠闲哼歌.webm",
+      "width": 640,
+      "height": 360
+    },
+    "扑克魔术": {
+      "duration": 10.04,
+      "file": "扑克魔术.webm",
+      "width": 640,
+      "height": 360
+    },
+    "打瞌睡被惊醒": {
+      "duration": 10.04,
+      "file": "打瞌睡被惊醒.webm",
+      "width": 640,
+      "height": 360
+    },
+    "抽陀螺": {
+      "duration": 10.04,
+      "file": "抽陀螺.webm",
+      "width": 640,
+      "height": 360
+    },
+    "拆礼物": {
+      "duration": 10.04,
+      "file": "拆礼物.webm",
+      "width": 640,
+      "height": 360
+    },
+    "插茱萸赏菊": {
+      "duration": 10.04,
+      "file": "插茱萸赏菊.webm",
+      "width": 640,
+      "height": 360
+    },
+    "摇扇纳凉": {
+      "duration": 10.04,
+      "file": "摇扇纳凉.webm",
+      "width": 640,
+      "height": 360
+    },
+    "撸猫": {
+      "duration": 10.04,
+      "file": "撸猫.webm",
+      "width": 640,
+      "height": 360
+    },
+    "收红包": {
+      "duration": 10.04,
+      "file": "收红包.webm",
+      "width": 640,
+      "height": 360
+    },
+    "放孔明灯": {
+      "duration": 10.04,
+      "file": "放孔明灯.webm",
+      "width": 640,
+      "height": 360
+    },
+    "放河灯": {
+      "duration": 10.04,
+      "file": "放河灯.webm",
+      "width": 640,
+      "height": 360
+    },
+    "放烟花": {
+      "duration": 10.04,
+      "file": "放烟花.webm",
+      "width": 640,
+      "height": 360
+    },
+    "放风筝": {
+      "duration": 10.04,
+      "file": "放风筝.webm",
+      "width": 640,
+      "height": 360
+    },
+    "整体换装试色": {
+      "duration": 10.04,
+      "file": "整体换装试色.webm",
+      "width": 640,
+      "height": 360
+    },
+    "是啊，吃什么": {
+      "duration": 10.04,
+      "file": "是啊，吃什么.webm",
+      "width": 640,
+      "height": 360
+    },
+    "晨间刷牙": {
+      "duration": 10.04,
+      "file": "晨间刷牙.webm",
+      "width": 640,
+      "height": 360
+    },
+    "期待开饭": {
+      "duration": 5.12,
+      "file": "期待开饭.webm",
+      "width": 640,
+      "height": 360
+    },
+    "涮火锅": {
+      "duration": 10.04,
+      "file": "涮火锅.webm",
+      "width": 640,
+      "height": 360
+    },
+    "深度思考碎碎念": {
+      "duration": 10.04,
+      "file": "深度思考碎碎念.webm",
+      "width": 640,
+      "height": 360
+    },
+    "点击回应-元气挥手": {
+      "duration": 10.04,
+      "file": "点击回应-元气挥手.webm",
+      "width": 640,
+      "height": 360
+    },
+    "点击回应-害羞惊讶": {
+      "duration": 10.04,
+      "file": "点击回应-害羞惊讶.webm",
+      "width": 640,
+      "height": 360
+    },
+    "点击回应-开心跃动": {
+      "duration": 10.04,
+      "file": "点击回应-开心跃动.webm",
+      "width": 640,
+      "height": 360
+    },
+    "点击回应-挠痒咯咯笑": {
+      "duration": 10.04,
+      "file": "点击回应-挠痒咯咯笑.webm",
+      "width": 640,
+      "height": 360
+    },
+    "照镜子": {
+      "duration": 10.04,
+      "file": "照镜子.webm",
+      "width": 640,
+      "height": 360
+    },
+    "玩水枪": {
+      "duration": 10.04,
+      "file": "玩水枪.webm",
+      "width": 640,
+      "height": 360
+    },
+    "玩游戏气急败坏": {
+      "duration": 10.04,
+      "file": "玩游戏气急败坏.webm",
+      "width": 640,
+      "height": 360
+    },
+    "用鲸鱼尾巴拍打地面": {
+      "duration": 10.04,
+      "file": "用鲸鱼尾巴拍打地面.webm",
+      "width": 640,
+      "height": 360
+    },
+    "睡觉-开始": {
+      "duration": 10.04,
+      "file": "睡觉-开始.webm",
+      "width": 640,
+      "height": 360
+    },
+    "睡觉-循环": {
+      "duration": 10.04,
+      "file": "睡觉-循环.webm",
+      "width": 640,
+      "height": 360
+    },
+    "睡觉-起来": {
+      "duration": 10.04,
+      "file": "睡觉-起来.webm",
+      "width": 640,
+      "height": 360
+    },
+    "碎碎念-发呆碎碎念": {
+      "duration": 10.04,
+      "file": "碎碎念-发呆碎碎念.webm",
+      "width": 640,
+      "height": 360
+    },
+    "碎碎念-对屏碎碎念": {
+      "duration": 10.04,
+      "file": "碎碎念-对屏碎碎念.webm",
+      "width": 640,
+      "height": 360
+    },
+    "碎碎念-擦桌碎碎念": {
+      "duration": 10.04,
+      "file": "碎碎念-擦桌碎碎念.webm",
+      "width": 640,
+      "height": 360
+    },
+    "穿针乞巧": {
+      "duration": 10.04,
+      "file": "穿针乞巧.webm",
+      "width": 640,
+      "height": 360
+    },
+    "舞狮头": {
+      "duration": 10.04,
+      "file": "舞狮头.webm",
+      "width": 640,
+      "height": 360
+    },
+    "荡秋千": {
+      "duration": 10.04,
+      "file": "荡秋千.webm",
+      "width": 640,
+      "height": 360
+    },
+    "萌化小幽灵": {
+      "duration": 10.04,
+      "file": "萌化小幽灵.webm",
+      "width": 640,
+      "height": 360
+    },
+    "蓝鲸现世": {
+      "duration": 10.04,
+      "file": "蓝鲸现世.webm",
+      "width": 640,
+      "height": 360
+    },
+    "蝴蝶蜜蜂环绕头顶开花": {
+      "duration": 10.04,
+      "file": "蝴蝶蜜蜂环绕头顶开花.webm",
+      "width": 640,
+      "height": 360
+    },
+    "螃蟹走路": {
+      "duration": 10.04,
+      "file": "螃蟹走路.webm",
+      "width": 640,
+      "height": 360
+    },
+    "被吓一跳": {
+      "duration": 10.04,
+      "file": "被吓一跳.webm",
+      "width": 640,
+      "height": 360
+    },
+    "被落叶淹没": {
+      "duration": 10.04,
+      "file": "被落叶淹没.webm",
+      "width": 640,
+      "height": 360
+    },
+    "装点圣诞树": {
+      "duration": 10.04,
+      "file": "装点圣诞树.webm",
+      "width": 640,
+      "height": 360
+    },
+    "讨糖南瓜灯": {
+      "duration": 10.04,
+      "file": "讨糖南瓜灯.webm",
+      "width": 640,
+      "height": 360
+    },
+    "超大伸懒腰": {
+      "duration": 10.04,
+      "file": "超大伸懒腰.webm",
+      "width": 640,
+      "height": 360
+    },
+    "踢毽子": {
+      "duration": 10.04,
+      "file": "踢毽子.webm",
+      "width": 640,
+      "height": 360
+    },
+    "轻快摇摆舞": {
+      "duration": 10.04,
+      "file": "轻快摇摆舞.webm",
+      "width": 640,
+      "height": 360
+    },
+    "轻快记录": {
+      "duration": 10.04,
+      "file": "轻快记录.webm",
+      "width": 640,
+      "height": 360
+    },
+    "通用-右侧螃蟹步-dshwe": {
+      "duration": 5.17,
+      "file": "通用-右侧螃蟹步-dshwe.webm",
+      "width": 640,
+      "height": 360
+    },
+    "通用-左侧螃蟹步-dshwe": {
+      "duration": 5.17,
+      "file": "通用-左侧螃蟹步-dshwe.webm",
+      "width": 640,
+      "height": 360
+    },
+    "骑木马": {
+      "duration": 10.04,
+      "file": "骑木马.webm",
+      "width": 640,
+      "height": 360
+    },
+    "鲸鱼吐泡泡特效": {
+      "duration": 10.04,
+      "file": "鲸鱼吐泡泡特效.webm",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "aliases": {
+    "idle": "待机呼吸休闲",
+    "welcome_wave": "点击回应-元气挥手",
+    "happy_jump": "点击回应-开心跃动",
+    "shy": "点击回应-害羞惊讶",
+    "grumpy": "傲娇生气",
+    "laugh": "点击回应-挠痒咯咯笑",
+    "thinking": "深度思考碎碎念",
+    "busy": "写代码",
+    "celebrate": "工作状态-雀跃庆祝",
+    "bored": "哈欠连天",
+    "surprised": "被吓一跳",
+    "gift": "拆礼物",
+    "sleepy": "原地小憩沉眠"
+  },
+  "clicks": [
+    "点击回应-开心跃动",
+    "点击回应-害羞惊讶",
+    "点击回应-挠痒咯咯笑",
+    "点击回应-元气挥手"
+  ],
+  "categories": [
+    {
+      "id": "小动作",
+      "weight": 28,
+      "actions": [
+        "悠闲哼歌",
+        "超大伸懒腰",
+        "原地敲击桌面互动",
+        "原地重力下蹲压缩",
+        "哈欠连天",
+        "原地小憩沉眠",
+        "女仆屈膝礼仪",
+        "被吓一跳",
+        "小幅度原地360度旋转展示",
+        "偷吃零食被抓住",
+        "用鲸鱼尾巴拍打地面",
+        "打瞌睡被惊醒",
+        "照镜子",
+        "整体换装试色",
+        "轻快记录",
+        "写代码",
+        "摇扇纳凉",
+        "晨间刷牙",
+        "半身转向踢腿",
+        "傲娇生气",
+        "吉祥物-哈气-dshwe",
+        "吉祥物-跳抓眩晕落地起身-dshwe"
+      ]
+    },
+    {
+      "id": "玩耍",
+      "weight": 24,
+      "actions": [
+        "原地专心玩魔方",
+        "原地蹲下玩玩具汽车",
+        "鲸鱼吐泡泡特效",
+        "原地跳跃抓碎头顶物品",
+        "玩游戏气急败坏",
+        "玩水枪",
+        "小提琴演奏",
+        "蓝鲸现世",
+        "优雅女仆舞",
+        "轻快摇摆舞",
+        "可爱宅舞",
+        "吹气球",
+        "动物环绕",
+        "放风筝",
+        "拆礼物",
+        "变鸽子",
+        "扑克魔术",
+        "抽陀螺",
+        "吹笛子",
+        "蝴蝶蜜蜂环绕头顶开花",
+        "撸猫",
+        "凭空生花",
+        "骑木马",
+        "三球抛接",
+        "踢毽子",
+        "下五子棋",
+        "荡秋千"
+      ]
+    },
+    {
+      "id": "吃什么",
+      "weight": 18,
+      "actions": [
+        "吃白饭",
+        "大口吃零食",
+        "吃Token",
+        "吃早餐",
+        "吃午餐",
+        "吃晚餐",
+        "吃冰淇淋融化",
+        "吃大闸蟹",
+        "吃糖葫芦",
+        "吃长寿面",
+        "吃西瓜",
+        "涮火锅",
+        "吃饭·碗饭",
+        "吃饭团",
+        "吃饺子",
+        "吃汤圆",
+        "吃年糕",
+        "吃青团",
+        "吃腊八粥",
+        "吃重阳糕",
+        "吃粽子"
+      ]
+    },
+    {
+      "id": "时节",
+      "weight": 14,
+      "actions": [
+        "被落叶淹没",
+        "中秋赏月吃月饼",
+        "堆雪人",
+        "放烟花",
+        "收红包",
+        "写福字",
+        "穿针乞巧",
+        "舞狮头",
+        "讨糖南瓜灯",
+        "插茱萸赏菊",
+        "放河灯",
+        "萌化小幽灵",
+        "装点圣诞树",
+        "放孔明灯"
+      ]
+    },
+    {
+      "id": "文字",
+      "weight": 6,
+      "actions": [
+        "是啊，吃什么",
+        "深度思考碎碎念"
+      ]
+    }
+  ],
+  "events": {
+    "gift": [
+      "拆礼物",
+      "凭空生花",
+      "放烟花"
+    ],
+    "follow": [
+      "工作状态-雀跃庆祝"
+    ],
+    "enter": [
+      "点击回应-元气挥手"
+    ],
+    "whisper": [
+      "碎碎念-擦桌碎碎念",
+      "碎碎念-发呆碎碎念",
+      "碎碎念-对屏碎碎念"
+    ],
+    "balance": [
+      "余额-钱袋满溢",
+      "余额-金袋叮当",
+      "余额-钱袋如常",
+      "余额-数金皱眉",
+      "余额-袋空如洗",
+      "余额-分文不剩"
+    ],
+    "workStatus": [
+      "工作状态-思考冒泡",
+      "工作状态-忙碌点按",
+      "工作状态-清点归档",
+      "工作状态-原地踱步张望",
+      "工作状态-雀跃庆祝",
+      "工作状态-垂头叹气冒汗"
+    ],
+    "sleep": {
+      "start": [
+        "睡觉-开始"
+      ],
+      "loop": [
+        "睡觉-循环"
+      ],
+      "end": [
+        "睡觉-起来"
+      ]
+    }
+  },
+  "weights": {
+    "idle": 10,
+    "categories": 90
+  }
+}
